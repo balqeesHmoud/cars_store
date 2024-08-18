@@ -1,0 +1,7 @@
+<h1>{{ object.brand }} {{ object.model }}</h1>
+<p>Price: {{ object.price }}</p>
+<p>Bought: {{ object.is_bought }}</p>
+<p>Buyer: {{ object.buyer }}</p>
+<p>Buy Time: {{ object.buy_time }}</p>
+<a href="{% url 'car_update' object.pk %}">Update</a>
+<a href="{% url 'car_delete' object.pk %}">Delete</a>

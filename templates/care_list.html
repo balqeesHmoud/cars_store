@@ -1,12 +1,15 @@
-<!-- cars_app/templates/cars_app/car_list.html -->
-{% extends "base_generic.html" %}
-
-{% block content %}
-  <h1>Car List</h1>
-  <ul>
-    {% for car in object_list %}
-      <li><a href="{% url 'car_detail' car.pk %}">{{ car.brand }} {{ car.model }}</a></li>
-    {% endfor %}
-  </ul>
-  <a href="{% url 'car_create' %}">Create a new car</a>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car List</title>
+</head>
+<body>
+    <h1>Car List</h1>
+    <ul>
+        {% for car in object_list %}
+            <li><a href="{% url 'car_detail' car.pk %}">{{ car.brand }} {{ car.model }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'car_create' %}">Create a new car</a>
+</body>
+</html>
