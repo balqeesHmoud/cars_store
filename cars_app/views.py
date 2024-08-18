@@ -3,6 +3,10 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Car
 from django.urls import reverse_lazy
 
+
+class test_view(request):
+    return render(request, 'test_template.html')
+
 class CarListView(ListView):
     model = Car
     template_name = 'cars_app/car_list.html'  # You can specify your own template
